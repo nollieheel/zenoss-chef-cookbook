@@ -14,7 +14,7 @@ depends           "java"
 depends           "rabbitmq"
 depends           "selinux", '<= 0.5.6' # https://tickets.opscode.com/browse/COOK-3882
 depends           "zenoss_client"
-depends           "redisio"
+depends           "redisio", '~> 2.2.4'
 recipe           "zenoss", "Defaults to the client recipe."
 recipe           "zenoss::client", "Includes the `openssh` recipe and adds the device to the Zenoss server for monitoring."
 recipe           "zenoss::server", "Installs Zenoss, handling and configuring all the dependencies while adding Device Classes, Groups, Systems and Locations.  All nodes using the `zenoss::client` recipe are added for monitoring."
